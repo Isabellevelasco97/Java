@@ -8,23 +8,31 @@ public class Ice9 {
 		Scanner cin = new Scanner(System.in);
 		System.out.println("Please enter a number between 0 and 100");
 		
-		while (!cin.hasNextInt()) {
-			System.out.println("I said enter a number between 1 and 100");
-			cin.next();
-		}
-		if (cin.hasNextInt()) {
-			int x = cin.nextInt();
-			if (x < 0 || x > 100) {
-				System.out.println("That number is out of range");
+
+		while (true) {
+			if (!cin.hasNextInt()) {
+				// if user input a non number
+				cin.next();
+				System.out.println("I said enter a number between 0 and 100");
+			} else {
+				// if user input a number
+				int x = cin.nextInt();
+				if (x==-1) {
+					break;
+				}
+				else if (x == 73) {
+					System.out.println("Lucky guess!");
+				}
+				else if (x <= 0 || x >= 100) {
+					System.out.println("The number is out of range");
+				}
+				System.out.println("Enter a number between 0 and 100");
 			}
-			/*if (x == -1) {
-				break;
-			}*/
 		}
 		
-		}
 		//adding a comment for commit
 	}
+}
 
 
 		
