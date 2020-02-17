@@ -9,7 +9,7 @@ public class Assignment1 {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Please enter your name: ");
 		String name = scanner.nextLine();
-
+		
 		System.out.println("Hello, " + name + " Please enter the height of a right triangle: ");
 		int height = -1;
 		if (scanner.hasNextInt()) {
