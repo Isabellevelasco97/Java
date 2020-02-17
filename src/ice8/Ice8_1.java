@@ -4,23 +4,27 @@ public class Ice8_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		for (int i = 1; i <= 30; i++) {
 			if ((i%5)==0) {
 				System.out.print("\n");
 				continue;
-				}
+			}
 			else {
 				System.out.print("*");
-			}		
+			}
 		}
+		System.out.print("\n");
 		String table = "";
 		int width = 20;
+		
 		for (int j = 0; j < width; j++) {
 			table += "=";
 		}
 		table += "\n";
+		
 		for (int k = 0; k < width; k++) {
-			if (k%(width/5)==0) {
+			if (k % (width/5) == 0) {
 				table += "|";
 			}
 			else {
@@ -29,7 +33,7 @@ public class Ice8_1 {
 		}
 		table += "\n";
 		for (int k = 0; k < width; k++) {
-			if (k%(width/5)==0) {
+			if (k % (width/5) == 0) {
 				table += "|";
 			}
 			else {
@@ -37,7 +41,6 @@ public class Ice8_1 {
 			}
 		}
 		table += "\n";
-		System.out.print("\n");
 		for (int j = 0; j < width; j++) {
 			table += "=";
 		}
