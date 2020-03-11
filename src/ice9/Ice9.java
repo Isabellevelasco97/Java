@@ -5,32 +5,33 @@ public class Ice9 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		// Write a program that keeps asking the user to enter a number between 1 and
+		// 100. If the number that user enters is 73, your program should say "Lucky
+		// Guess!", else keeps asking. The user should be able to break out of the loop
+		// by entering -1. Your program should handle wrong inputs without crashing.
 		Scanner cin = new Scanner(System.in);
-		System.out.println("Please enter a number between 0 and 100");
+		int x = 0;
+		System.out.println("Enter a number between 0 and 100");
 		
-
-		while (true) {
-			if (!cin.hasNextInt()) {
-				// if user input a non number
-				cin.next();
-				System.out.println("I said enter a number between 0 and 100");
-			} else {
-				// if user input a number
-				int x = cin.nextInt();
-				if (x==-1) {
-					break;
-				}
-				else if (x == 73) {
-					System.out.println("Lucky guess!");
-				}
-				else if (x <= 0 || x >= 100) {
-					System.out.println("The number is out of range");
-				}
-				System.out.println("Enter a number between 0 and 100");
+		while (!cin.hasNextInt()) {
+			System.out.println("I said enter a number between 0 and 100");
+			cin.next();
+		}
+		while (cin.hasNextInt()) {
+			x = cin.nextInt();
+			if (x == -1) {
+				System.out.println("Play again");
+				break;
+			}
+			if (x == 73) {
+				System.out.println("Lucky guess!!");
+			}
+			else {
+				System.out.println("Keep guessing~! Enter a number between 1 and 100");
 			}
 		}
+		cin.close();
 		
-		//adding a comment for commit
 	}
 }
 
